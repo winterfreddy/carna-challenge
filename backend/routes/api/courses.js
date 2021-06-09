@@ -74,7 +74,7 @@ router.delete('/:id', (req, res) => {
         })
 })
 
-router.put(':/id', (req, res) => {
+router.put('/:id', (req, res) => {
     Course.findByIdAndUpdate(req.params.id, req.body)
         .then( data => {
             return res.json({ message: 'Course updated successfully', courseInfo: data });
